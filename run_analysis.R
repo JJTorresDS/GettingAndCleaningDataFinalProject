@@ -132,6 +132,10 @@ dim(fullMolten)
 
 fullMean <- dcast(fullMolten, Subject + Activity ~variable, mean)
 
-write.csv(fullMean, "AverageValues.csv", row.names = F)
+write.table(fullMean, "AverageValues.txt", row.names = F)
+
+#Cleans up the environment
+rm(list=ls())
+
 
 #*********** End of final Assignment **********
